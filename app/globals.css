@@ -26,6 +26,8 @@
   --font-display: 'display', serif;
   --font-sunroll: 'sunrollregular', serif;
   --font-edition: 'editionregular', sans-serif;
+  --font-arial: 'arialregular', sans-serif;
+  --font-amalfi: 'amalfi_coastregular', cursive;
 
   /* Background images */
   --background-image-background1: url('/src/project/Social Media/page 1/background image.jpg');
@@ -114,6 +116,36 @@
     font-display: swap;
   }
 
+  @font-face {
+    font-family: 'arialregular';
+    src: url('/src/fonts/arial-webfont.woff2') format('woff2'),
+         url('/src/fonts/arial-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'amalfi_coastregular';
+    src: url('/src/fonts/amalfi_coast-webfont.woff2') format('woff2'),
+         url('/src/fonts/amalfi_coast-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'noto';
+    src: url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'display';
+    src: url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+    font-display: swap;
+  }
+
   html {
     @apply scroll-smooth;
   }
@@ -154,6 +186,15 @@
     font-family: var(--font-edition);
   }
 
+  .font-arial {
+    font-family: var(--font-arial);
+    font-weight: 600;
+  }
+
+  .font-amalfi {
+    font-family: var(--font-amalfi);
+  }
+
   /* Opacity Utilities */
   .opacity-65 {
     opacity: 0.65;
@@ -162,6 +203,16 @@
   /* Scale Utilities */
   .scale-120 {
     scale: 1.2;
+  }
+
+  /* Transform Utilities */
+  .scale-x-\[-1\] {
+    transform: scaleX(-1);
+  }
+
+  /* Z-index Utilities */
+  .z-30 {
+    z-index: 30;
   }
 
   /* Scroller */
@@ -173,6 +224,51 @@
       white 75%,
       transparent 78%
     );
+  }
+
+  /* Surface Work Specific */
+  .image5,
+  .image6,
+  .image7,
+  .image8 {
+    @apply relative overflow-hidden;
+  }
+
+  .image9,
+  .image10 {
+    @apply transition-transform duration-300;
+  }
+
+  .explorationContainer {
+    @apply flex items-center;
+  }
+
+  .frontBackContainer {
+    @apply relative;
+  }
+
+  .bigfrontContainer,
+  .bigBackContainer {
+    @apply relative overflow-hidden;
+  }
+
+  .bigfrontContainer img,
+  .bigBackContainer img {
+    @apply transition-transform duration-300;
+  }
+
+  /* Coral Print Specific */
+  .coral {
+    @apply font-arial;
+  }
+
+  .print {
+    @apply font-amalfi;
+    z-index: 10;
+  }
+
+  .front {
+    z-index: 30;
   }
 
   /* Vilasita Components */

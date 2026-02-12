@@ -25,7 +25,7 @@ const projects = [
     imageSrc: '/src/project/Wedding card/page 2/mockup 3.png',
     title: 'Wedding card design',
     subtitle: '| Commission Work |',
-    imageScale: 'scale-[150%]',
+    imageScale: 'scale-105',
     imagePosition: 'h-full'
   },
   {
@@ -57,11 +57,11 @@ const projects = [
   },
   {
     id: 6,
-    href: '/projects/corals',
+    href: '/projects/coral-print',
     imageSrc: '/src/project/coral print/GIF/pattern 1.png',
     title: 'Corals',
     subtitle: '| A Print Project |',
-    imageScale: 'scale-100',
+    imageScale: 'scale-105',
     imagePosition: 'w-full'
   },
   {
