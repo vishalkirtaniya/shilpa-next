@@ -6,8 +6,8 @@ import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Preloader from '@/components/Preloader';
-import Footer from '@/components/Footer';
-
+import ProjectFooter from '@/components/ProjectFooter';
+import ProjectHeader from '@/components/ProjectHeader';
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -324,24 +324,7 @@ export default function SocialMediaPage() {
 
   return (
     <>
-      <header className="h-[50px] w-full flex items-center fixed z-10 bg-white">
-        <div className="container max-w-screen-xl mx-auto w-[95%] h-[80%] flex items-center justify-between">
-          <h1 className="font-sunroll text-lg">ShIlpa KIRtanIya</h1>
-          <ul className="text-md flex gap-10 font-noto">
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/projects">Project</Link>
-            </li>
-            <li>
-              <Link href="/projects#sectionToScroll" className="cursor-pointer">
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </header>
+      <ProjectHeader />
 
       <div className="order-content">
         {/* Hero Section */}
@@ -614,18 +597,7 @@ export default function SocialMediaPage() {
         </main>
 
         {/* Footer with Back Button */}
-        <footer className="h-[400px] w-full flex items-center justify-center">
-          <div className="container h-[70%] w-full flex flex-col justify-between">
-            <div className="h-1/3 w-full flex items-center justify-center">
-              <Link href="/projects">
-                <div className="h-[40px] w-[180px] rounded-lg flex justify-center items-center backButton text-md hover:text-lg transition duration-150 ease-in-out hover:shadow-[0_0_1px_1px_#494F55]">
-                  <h1 className="font-calibri">Back To Projects</h1>
-                </div>
-              </Link>
-            </div>
-            <Footer />
-          </div>
-        </footer>
+        <ProjectFooter />
       </div>
     </>
   );

@@ -72,6 +72,15 @@ const projects = [
     subtitle: '| Thread Needle Work |',
     imageScale: 'scale-105',
     imagePosition: 'w-full'
+  },
+  {
+    id: 8,
+    href: '/projects/weekly-edits',
+    imageSrc: '/src/project/weekly-edit/hero-2.jpg',
+    title: 'Surface embelishment',
+    subtitle: '| Newsletters |',
+    imageScale: 'scale-105',
+    imagePosition: 'w-full'
   }
 ];
 
