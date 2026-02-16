@@ -46,17 +46,6 @@ const ProjectFooter = () => {
         {/* COPYRIGHT */}
         <div className="h-1/3 w-full flex flex-col items-center justify-center">
           <p className="font-sans font-light">© 2024 All rights reserved</p>
-          <p className="font-sans font-light">
-            Website Developed by{" "}
-            <a
-              href="https://vishalkirtaniya.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue hover:underline font-medium"
-            >
-              Vishal Aditya
-            </a>
-          </p>
         </div>
       </div>
     </footer>

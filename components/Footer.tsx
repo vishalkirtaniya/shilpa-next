@@ -59,16 +59,6 @@ export default function Footer() {
           {/* COPYRIGHT */}
           <div className="text-sm font-light opacity-80">
             <p>Copyright ©2024 All Rights Reserved</p>
-            <p>
-              Website Developed by{' '}
-              <a
-                href="https://vishalkirtaniya.netlify.app/"
-                target="_blank"
-                className="text-blue hover:underline font-medium"
-              >
-                Vishal Aditya
-              </a>
-            </p>
           </div>
 
         </div>

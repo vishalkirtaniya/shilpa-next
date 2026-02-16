@@ -48,13 +48,13 @@ export default function WeeklyEditPage() {
 
         {/* INTRO TEXT */}
         <section className="max-w-4xl mx-auto px-8 mt-32">
-          <p className="text-2xl tracking-[0.3em] mb-6">NEWSLETTERS</p>
+          <p className="text-xl tracking-[0.3em] mb-6">NEWSLETTERS</p>
 
           <h1 className="text-7xl md:text-6xl mb-10 font-light font-sunroll">
             The Weekly Edit
           </h1>
 
-          <p className="text-xl leading-snug mb-6">
+          <p className="text-xl leading-snug mb-6 text-justify">
             While working at Makemake Organics, I designed these newsletters to
             help the brand stay connected with its customers and share new
             collection launches, sales, and updates. The focus was on keeping
@@ -62,7 +62,7 @@ export default function WeeklyEditPage() {
             aesthetic.
           </p>
 
-          <p className="text-sm leading-relaxed">
+          <p className="text-xl leading-relaxed text-justify">
             The complete process was managed from design to execution, with
             layouts created in Illustrator and the final emails built and sent
             through Flodesk, ensuring each newsletter stayed consistent with the
@@ -71,7 +71,7 @@ export default function WeeklyEditPage() {
         </section>
 
         {/* PHONE MOCKUPS */}
-        <section className="mt-32 bg-[#dfd8cb] py-20">
+        <section className="mt-32 bg-[#dfd8cb] py-20 background-social-media">
           <div className="overflow-x-auto">
             <div className="flex justify-between w-full px-8">
               {['1', '2', '3', '4', '5'].map((n) => (

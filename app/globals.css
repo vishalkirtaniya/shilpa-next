@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
   /* Custom screens */
@@ -13,26 +13,26 @@
   --breakpoint-4xl: 2560px;
 
   /* Custom colors */
-  --color-black: #14142B;
-  --color-shadedblack: #494F55;
-  --color-blue: #1A80E6;
-  --color-mud: #C54045;
-  --color-offblue: #A9D7D5;
-  --color-grey: #EEEEEE;
+  --color-black: #14142b;
+  --color-shadedblack: #494f55;
+  --color-blue: #1a80e6;
+  --color-mud: #c54045;
+  --color-offblue: #a9d7d5;
+  --color-grey: #eeeeee;
 
   /* Font families */
-  --font-noto: 'noto', serif;
-  --font-calibri: 'calibri', sans-serif;
-  --font-display: 'display', serif;
-  --font-sunroll: 'sunrollregular', serif;
-  --font-edition: 'editionregular', sans-serif;
-  --font-arial: 'arialregular', sans-serif;
-  --font-amalfi: 'amalfi_coastregular', cursive;
+  --font-noto: "noto", serif;
+  --font-calibri: "calibri", sans-serif;
+  --font-display: "display", serif;
+  --font-sunroll: "sunrollregular", serif;
+  --font-edition: "editionregular", sans-serif;
+  --font-arial: "arialregular", sans-serif;
+  --font-amalfi: "amalfi_coastregular", cursive;
 
   /* Background images */
-  --background-image-background1: url('/src/project/Social Media/page 1/background image.jpg');
-  --background-image-header1: url('/src/project/Social Media/cover image.jpg');
-  --background-image-vilasita: url('/src/project/VILASITA/page 5/background image.png');
+  --background-image-background1: url("/src/project/Social Media/page 1/background image.jpg");
+  --background-image-header1: url("/src/project/Social Media/cover image.jpg");
+  --background-image-vilasita: url("/src/project/VILASITA/page 5/background image.png");
 
   /* Animations */
   --animate-wave: wave 1s linear infinite;
@@ -42,107 +42,163 @@
   --animate-fadeLoop3: fadeLoop 6s infinite 4s;
 
   @keyframes wave {
-    0% { transform: scale(0); }
-    50% { transform: scale(1); }
-    100% { transform: scale(0); }
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
   }
 
   @keyframes scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-88vw); }
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-88vw);
+    }
   }
 
   @keyframes fadeLoop {
-    0% { opacity: 1; }
-    33.33% { opacity: 0; }
-    66.66% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+      opacity: 1;
+    }
+    33.33% {
+      opacity: 0;
+    }
+    66.66% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   /* Page 5 Image Animations */
   @keyframes image1 {
-    0%, 100% { opacity: 1; }
-    20%, 80% { opacity: 0; }
+    0%,
+    100% {
+      opacity: 1;
+    }
+    20%,
+    80% {
+      opacity: 0;
+    }
   }
 
   @keyframes image2 {
-    0%, 100% { opacity: 0; }
-    20%, 40% { opacity: 1; }
-    60%, 80% { opacity: 0; }
+    0%,
+    100% {
+      opacity: 0;
+    }
+    20%,
+    40% {
+      opacity: 1;
+    }
+    60%,
+    80% {
+      opacity: 0;
+    }
   }
 
   @keyframes image3 {
-    0%, 100% { opacity: 0; }
-    40%, 60% { opacity: 1; }
+    0%,
+    100% {
+      opacity: 0;
+    }
+    40%,
+    60% {
+      opacity: 1;
+    }
   }
 
   @keyframes image4 {
-    0%, 100% { opacity: 0; }
-    60%, 80% { opacity: 1; }
+    0%,
+    100% {
+      opacity: 0;
+    }
+    60%,
+    80% {
+      opacity: 1;
+    }
   }
 
   @keyframes image5 {
-    0%, 100% { opacity: 0; }
-    80%, 100% { opacity: 1; }
+    0%,
+    100% {
+      opacity: 0;
+    }
+    80%,
+    100% {
+      opacity: 1;
+    }
   }
 }
 
 @layer base {
   @font-face {
-    font-family: 'sunrollregular';
-    src: url('/src/fonts/sunroll-webfont.woff2') format('woff2'),
-         url('/src/fonts/sunroll-webfont.woff') format('woff');
+    font-family: "sunrollregular";
+    src:
+      url("/src/fonts/sunroll-webfont.woff2") format("woff2"),
+      url("/src/fonts/sunroll-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: 'calibri';
-    src: url('/src/fonts/calibri-regular.ttf') format('truetype');
-    src: url('/src/fonts/calibri-regular-webfont.woff2') format('woff2'),
-         url('/src/fonts/calibri-regular-webfont.woff') format('woff');
+    font-family: "calibri";
+    src: url("/src/fonts/calibri-regular.ttf") format("truetype");
+    src:
+      url("/src/fonts/calibri-regular-webfont.woff2") format("woff2"),
+      url("/src/fonts/calibri-regular-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: 'editionregular';
-    src: url('/src/fonts/edition_-webfont.woff2') format('woff2'),
-         url('/src/fonts/edition_-webfont.woff') format('woff');
+    font-family: "editionregular";
+    src:
+      url("/src/fonts/edition_-webfont.woff2") format("woff2"),
+      url("/src/fonts/edition_-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: 'arialregular';
-    src: url('/src/fonts/arial-webfont.woff2') format('woff2'),
-         url('/src/fonts/arial-webfont.woff') format('woff');
+    font-family: "arialregular";
+    src:
+      url("/src/fonts/arial-webfont.woff2") format("woff2"),
+      url("/src/fonts/arial-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: 'amalfi_coastregular';
-    src: url('/src/fonts/amalfi_coast-webfont.woff2') format('woff2'),
-         url('/src/fonts/amalfi_coast-webfont.woff') format('woff');
+    font-family: "amalfi_coastregular";
+    src:
+      url("/src/fonts/amalfi_coast-webfont.woff2") format("woff2"),
+      url("/src/fonts/amalfi_coast-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: 'noto';
-    src: url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+    font-family: "noto";
+    src: url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap");
     font-display: swap;
   }
 
   @font-face {
-    font-family: 'display';
-    src: url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+    font-family: "display";
+    src: url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
     font-display: swap;
   }
 
@@ -160,7 +216,7 @@
   .backButton {
     @apply transition-all duration-150 ease-in-out;
   }
-  
+
   .backButton:hover {
     box-shadow: 0 0 1px 1px var(--color-shadedblack);
   }
@@ -299,23 +355,53 @@
     @apply object-cover;
   }
 
-  .page1Main { animation: image1 12s infinite; }
-  .page2Main { animation: image2 12s infinite; }
-  .page3Main { animation: image3 12s infinite; }
-  .page4Main { animation: image4 12s infinite; }
-  .page5Main { animation: image5 12s infinite; }
+  .page1Main {
+    animation: image1 12s infinite;
+  }
+  .page2Main {
+    animation: image2 12s infinite;
+  }
+  .page3Main {
+    animation: image3 12s infinite;
+  }
+  .page4Main {
+    animation: image4 12s infinite;
+  }
+  .page5Main {
+    animation: image5 12s infinite;
+  }
 
-  .page1-1 { animation: image1 12s infinite 150ms; }
-  .page2-1 { animation: image2 12s infinite 150ms; }
-  .page3-1 { animation: image3 12s infinite 150ms; }
-  .page4-1 { animation: image4 12s infinite 150ms; }
-  .page5-1 { animation: image5 12s infinite 150ms; }
+  .page1-1 {
+    animation: image1 12s infinite 150ms;
+  }
+  .page2-1 {
+    animation: image2 12s infinite 150ms;
+  }
+  .page3-1 {
+    animation: image3 12s infinite 150ms;
+  }
+  .page4-1 {
+    animation: image4 12s infinite 150ms;
+  }
+  .page5-1 {
+    animation: image5 12s infinite 150ms;
+  }
 
-  .page1-2 { animation: image1 12s infinite 300ms; }
-  .page2-2 { animation: image2 12s infinite 300ms; }
-  .page3-2 { animation: image3 12s infinite 300ms; }
-  .page4-2 { animation: image4 12s infinite 300ms; }
-  .page5-2 { animation: image5 12s infinite 300ms; }
+  .page1-2 {
+    animation: image1 12s infinite 300ms;
+  }
+  .page2-2 {
+    animation: image2 12s infinite 300ms;
+  }
+  .page3-2 {
+    animation: image3 12s infinite 300ms;
+  }
+  .page4-2 {
+    animation: image4 12s infinite 300ms;
+  }
+  .page5-2 {
+    animation: image5 12s infinite 300ms;
+  }
 }
 
 @layer utilities {
@@ -323,11 +409,11 @@
   .animate-fadeLoop1 {
     animation: fadeLoop 6s infinite;
   }
-  
+
   .animate-fadeLoop2 {
     animation: fadeLoop 6s infinite 2s;
   }
-  
+
   .animate-fadeLoop3 {
     animation: fadeLoop 6s infinite 4s;
   }
@@ -337,13 +423,13 @@
   }
 
   .animatedImages {
-    mask: linear-gradient(
-      90deg,
-      transparent,
-      white 5%,
-      white 95%,
-      transparent
-    );
+    mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
     overflow: hidden;
   }
+}
+
+.background-social-media {
+  background-image: url("/src/project/Social Media/cover image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
