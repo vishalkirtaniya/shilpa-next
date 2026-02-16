@@ -77,10 +77,9 @@ export default function MailerSection() {
       <div className="flex w-full">
         <div className="flex-1"></div>
         <div className="flex-12 flex justify-end">
-          <p className="group text-xs tracking-[0.3em] mt-20 opacity-60 cursor-pointer inline-block hover:opacity-100 transition">
+          <p className="group text-xs tracking-[0.3em] mt-20 opacity-60 inline-block transition">
             <span className="relative inline-block">
               CLICK TO VIEW FULL MAILER
-              <span className="absolute right-0 -bottom-1 h-[1px] w-0 bg-current transition-all duration-300 ease-out group-hover:w-full"></span>
             </span>
           </p>
         </div>
