@@ -408,14 +408,20 @@
   /* Animation Utilities */
   .animate-fadeLoop1 {
     animation: fadeLoop 6s infinite;
+    animation-fill-mode: both;
+    will-change: opacity;
   }
 
   .animate-fadeLoop2 {
     animation: fadeLoop 6s infinite 2s;
+    animation-fill-mode: both;
+    will-change: opacity;
   }
 
   .animate-fadeLoop3 {
     animation: fadeLoop 6s infinite 4s;
+    animation-fill-mode: both;
+    will-change: opacity;
   }
 
   .animate-scroll {

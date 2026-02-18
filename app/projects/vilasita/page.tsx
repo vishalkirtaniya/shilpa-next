@@ -1,72 +1,62 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Preloader from '@/components/Preloader';
-import ProjectFooter from '@/components/ProjectFooter';
-import ProjectHeader from '@/components/ProjectHeader';
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Preloader from "@/components/Preloader";
+import ProjectFooter from "@/components/ProjectFooter";
+import ProjectHeader from "@/components/ProjectHeader";
 
 // Register GSAP plugins
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
 // Image data for scroller
 const scrollerImages = [
-  { src: '/src/project/VILASITA/Page4/1.png', alt: 'Vilasita pattern 1' },
-  { src: '/src/project/VILASITA/Page4/2.png', alt: 'Vilasita pattern 2' },
-  { src: '/src/project/VILASITA/Page4/3.png', alt: 'Vilasita pattern 3' },
-  { src: '/src/project/VILASITA/Page4/4.png', alt: 'Vilasita pattern 4' },
-  { src: '/src/project/VILASITA/Page4/5.png', alt: 'Vilasita pattern 5' },
-  { src: '/src/project/VILASITA/Page4/6.png', alt: 'Vilasita pattern 6' },
-  { src: '/src/project/VILASITA/Page4/7.png', alt: 'Vilasita pattern 7' },
-  { src: '/src/project/VILASITA/Page4/8.png', alt: 'Vilasita pattern 8' },
+  { src: "/src/project/VILASITA/Page4/1.png", alt: "Vilasita pattern 1" },
+  { src: "/src/project/VILASITA/Page4/2.png", alt: "Vilasita pattern 2" },
+  { src: "/src/project/VILASITA/Page4/3.png", alt: "Vilasita pattern 3" },
+  { src: "/src/project/VILASITA/Page4/4.png", alt: "Vilasita pattern 4" },
+  { src: "/src/project/VILASITA/Page4/5.png", alt: "Vilasita pattern 5" },
+  { src: "/src/project/VILASITA/Page4/6.png", alt: "Vilasita pattern 6" },
+  { src: "/src/project/VILASITA/Page4/7.png", alt: "Vilasita pattern 7" },
+  { src: "/src/project/VILASITA/Page4/8.png", alt: "Vilasita pattern 8" },
 ];
 
 // Page 5 content arrays
 const mainPageContent = [
-  '/src/project/VILASITA/page 5/1.jpg',
-  '/src/project/VILASITA/page 5/2.jpg',
-  '/src/project/VILASITA/page 5/3.jpg',
-  '/src/project/VILASITA/page 5/4.jpg',
-  '/src/project/VILASITA/page 5/5.jpg',
+  "/src/project/VILASITA/page 5/1.jpg",
+  "/src/project/VILASITA/page 5/2.jpg",
+  "/src/project/VILASITA/page 5/3.jpg",
+  "/src/project/VILASITA/page 5/4.jpg",
+  "/src/project/VILASITA/page 5/5.jpg",
 ];
 
 const page1Content = [
-  '/src/project/VILASITA/page 5/1.1.jpg',
-  '/src/project/VILASITA/page 5/2.1.jpg',
-  '/src/project/VILASITA/page 5/3.1.jpg',
-  '/src/project/VILASITA/page 5/4.1.jpg',
-  '/src/project/VILASITA/page 5/5.1.jpg',
+  "/src/project/VILASITA/page 5/1.1.jpg",
+  "/src/project/VILASITA/page 5/2.1.jpg",
+  "/src/project/VILASITA/page 5/3.1.jpg",
+  "/src/project/VILASITA/page 5/4.1.jpg",
+  "/src/project/VILASITA/page 5/5.1.jpg",
 ];
 
 const page2Content = [
-  '/src/project/VILASITA/page 5/1.2.jpg',
-  '/src/project/VILASITA/page 5/2.2.jpg',
-  '/src/project/VILASITA/page 5/3.2.jpg',
-  '/src/project/VILASITA/page 5/4.2.jpg',
-  '/src/project/VILASITA/page 5/5.2.jpg',
+  "/src/project/VILASITA/page 5/1.2.jpg",
+  "/src/project/VILASITA/page 5/2.2.jpg",
+  "/src/project/VILASITA/page 5/3.2.jpg",
+  "/src/project/VILASITA/page 5/4.2.jpg",
+  "/src/project/VILASITA/page 5/5.2.jpg",
 ];
 
-const garmentNames = [
-  'Nandita',
-  'Shilpa',
-  'Vishek',
-  'Gauri',
-  'Vibha',
-];
+const garmentNames = ["Nandita", "Shilpa", "Vishek", "Gauri", "Vibha"];
 
 export default function VilasitaPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
-  
-  // Refs for scroller
-  const scrollerRef = useRef<HTMLDivElement>(null);
-  const scrollerInnerRef = useRef<HTMLDivElement>(null);
-  
+
   // Refs for section5
   const section5Ref = useRef<HTMLElement>(null);
   const mainPageRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -81,7 +71,7 @@ export default function VilasitaPage() {
 
     return () => {
       clearTimeout(timer);
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
@@ -98,7 +88,7 @@ export default function VilasitaPage() {
           repeatDelay: 2,
           repeat: -1,
           yoyo: true,
-        }
+        },
       );
 
       gsap.fromTo(
@@ -110,7 +100,7 @@ export default function VilasitaPage() {
           repeatDelay: 2,
           repeat: -1,
           yoyo: true,
-        }
+        },
       );
 
       gsap.fromTo(
@@ -123,7 +113,7 @@ export default function VilasitaPage() {
           repeat: -1,
           yoyo: true,
           delay: 1,
-        }
+        },
       );
 
       gsap.fromTo(
@@ -136,7 +126,7 @@ export default function VilasitaPage() {
           repeat: -1,
           yoyo: true,
           delay: 1,
-        }
+        },
       );
 
       gsap.fromTo(
@@ -149,7 +139,7 @@ export default function VilasitaPage() {
           repeat: -1,
           yoyo: true,
           delay: 2,
-        }
+        },
       );
 
       gsap.fromTo(
@@ -162,7 +152,7 @@ export default function VilasitaPage() {
           repeat: -1,
           yoyo: true,
           delay: 2,
-        }
+        },
       );
 
       // Set initial opacity for page 5
@@ -172,17 +162,19 @@ export default function VilasitaPage() {
       gsap.set(garmentsRefs.current, { opacity: 0 });
 
       // Set initial opacity of first image to 1
-      if (mainPageRefs.current[0]) gsap.set(mainPageRefs.current[0], { opacity: 1 });
+      if (mainPageRefs.current[0])
+        gsap.set(mainPageRefs.current[0], { opacity: 1 });
       if (page1Refs.current[0]) gsap.set(page1Refs.current[0], { opacity: 1 });
       if (page2Refs.current[0]) gsap.set(page2Refs.current[0], { opacity: 1 });
-      if (garmentsRefs.current[0]) gsap.set(garmentsRefs.current[0], { opacity: 0.7 });
+      if (garmentsRefs.current[0])
+        gsap.set(garmentsRefs.current[0], { opacity: 0.7 });
     }
   }, [isLoading]);
 
   // Handle click on section5
   const handleSection5Click = () => {
     const nextIndex = (currentIndex + 1) % mainPageContent.length;
-    
+
     // Animate mainPage images
     gsap.to(mainPageRefs.current[nextIndex], { opacity: 1, duration: 0.5 });
     gsap.to(mainPageRefs.current[currentIndex], { opacity: 0, duration: 0.5 });
@@ -201,20 +193,6 @@ export default function VilasitaPage() {
 
     setCurrentIndex(nextIndex);
   };
-
-  // Scroller animation
-  useEffect(() => {
-    if (!isLoading && scrollerInnerRef.current && scrollerRef.current) {
-      const scrollerInner = scrollerInnerRef.current;
-      const children = Array.from(scrollerInner.children);
-      
-      children.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        (duplicatedItem as HTMLElement).setAttribute('aria-hidden', 'true');
-        scrollerInner.appendChild(duplicatedItem);
-      });
-    }
-  }, [isLoading]);
 
   if (isLoading) {
     return <Preloader />;
@@ -235,7 +213,8 @@ export default function VilasitaPage() {
                 </h1>
                 <h1 className="font-calibri bold text-xl">2021</h1>
                 <h1 className="font-calibri text-xl text-right">
-                  In collaboration with <br />weavers of Gopalpur, Odisha
+                  In collaboration with <br />
+                  weavers of Gopalpur, Odisha
                 </h1>
               </div>
               <h1 className="mainHeading font-sunroll text-9xl text-center">
@@ -243,26 +222,26 @@ export default function VilasitaPage() {
               </h1>
               <div className="h-[10vh] w-full"></div>
             </div>
-            
+
             {/* Hero Images with CSS Animation */}
             <div className="h-full w-full absolute">
-              <div className="relative h-full w-full overflow-hidden z-0 bg-black">
+              <div className="relative h-full w-full overflow-hidden z-0 bg-black pointer-events-none">
                 <Image
-                  className="w-full absolute object-cover animate-fadeLoop1"
+                  className="w-full absolute inset-0 object-cover animate-fadeLoop1"
                   src="/src/project/VILASITA/heroImages/1.png"
                   alt="Vilasita hero 1"
                   fill
                   priority
                 />
                 <Image
-                  className="w-full absolute object-cover animate-fadeLoop2"
+                  className="w-full absolute inset-0 object-cover animate-fadeLoop2"
                   src="/src/project/VILASITA/heroImages/2.png"
                   alt="Vilasita hero 2"
                   fill
                   priority
                 />
                 <Image
-                  className="w-full absolute object-cover animate-fadeLoop3"
+                  className="w-full absolute inset-0 object-cover animate-fadeLoop3"
                   src="/src/project/VILASITA/heroImages/3.png"
                   alt="Vilasita hero 3"
                   fill
@@ -282,11 +261,12 @@ export default function VilasitaPage() {
                     A ready-to-wear collection.
                   </h1>
                   <h1 className="w-[270px] font-bold text-right text-sm leading-4">
-                    In collaboration with <br />weavers of Gopalpur, Odisha
+                    In collaboration with <br />
+                    weavers of Gopalpur, Odisha
                   </h1>
                 </div>
               </div>
-              
+
               <div className="h-[90%] w-full">
                 <div className="h-[40.5%] w-full flex flex-col justify-end font-light opacity-70">
                   <p className="w-[500px] text-justify text-lg leading-5 font-light">
@@ -297,13 +277,14 @@ export default function VilasitaPage() {
                     indulgence, reflecting the flamboyance of their lives.
                   </p>
                   <p className="w-[500px] text-justify text-lg leading-5 my-8">
-                    Vilasita encapsulates the essence of ancient Indian luxury and
-                    heritage, bringing relevance to opulent living. By modernizing
-                    silhouettes and motifs, this timeless capsule collection of
-                    women&apos;s wear embraces a subtle and earthy color palette.
+                    Vilasita encapsulates the essence of ancient Indian luxury
+                    and heritage, bringing relevance to opulent living. By
+                    modernizing silhouettes and motifs, this timeless capsule
+                    collection of women&apos;s wear embraces a subtle and earthy
+                    color palette.
                   </p>
                 </div>
-                
+
                 {/* Grid Images with GSAP animations */}
                 <div className="h-[59.5%] w-full flex justify-start gap-5">
                   <div className="h-[480px] w-[320px] overflow-hidden relative bg-black">
@@ -423,18 +404,22 @@ export default function VilasitaPage() {
           </section>
 
           {/* Section 6 - Scroller */}
-          <section 
-            ref={scrollerRef}
-            className="h-[700px] w-full mx-auto overflow-hidden scroller flex justify-center items-center"
-          >
+          {/* Section 6 - Infinite Scroller */}
+          <section className="w-screen overflow-hidden scroller py-24">
             <div
-              ref={scrollerInnerRef}
-              className="scrollerInner h-[60%] w-full flex gap-[1vw] self-center animate-scroll"
+              className="flex w-max gap-[1vw] animate-marquee"
+              style={{ animationDuration: "35s" }}
             >
-              {scrollerImages.map((image, index) => (
+              {[...scrollerImages, ...scrollerImages].map((image, index) => (
                 <div
                   key={`scroller-${index}`}
-                  className="w-[10vw] h-full relative"
+                  className="
+          relative
+          w-[10vw]
+          min-w-[140px]
+          h-[260px]
+          shrink-0
+        "
                 >
                   <Image
                     src={image.src}
@@ -459,7 +444,9 @@ export default function VilasitaPage() {
                 {mainPageContent.map((src, index) => (
                   <div
                     key={`main-${index}`}
-                    ref={(el) => { mainPageRefs.current[index] = el; }}
+                    ref={(el) => {
+                      mainPageRefs.current[index] = el;
+                    }}
                     className="h-full w-full mainPage absolute"
                   >
                     <Image
@@ -478,14 +465,16 @@ export default function VilasitaPage() {
                   <h1 className="h-[10%] font-sunroll text-4xl text-white">
                     VIlaSITa
                   </h1>
-                  
+
                   <div className="h-[80%] w-full flex justify-between">
                     {/* Left Detail Images */}
                     <div className="h-full w-[45%] relative overflow-hidden">
                       {page1Content.map((src, index) => (
                         <div
                           key={`page1-${index}`}
-                          ref={(el) => { page1Refs.current[index] = el; }}
+                          ref={(el) => {
+                            page1Refs.current[index] = el;
+                          }}
                           className="h-full w-full page-1 absolute"
                         >
                           <Image
@@ -503,7 +492,9 @@ export default function VilasitaPage() {
                       {page2Content.map((src, index) => (
                         <div
                           key={`page2-${index}`}
-                          ref={(el) => { page2Refs.current[index] = el; }}
+                          ref={(el) => {
+                            page2Refs.current[index] = el;
+                          }}
                           className="h-full w-full page2 absolute"
                         >
                           <Image
@@ -527,7 +518,9 @@ export default function VilasitaPage() {
                       {garmentNames.map((name, index) => (
                         <div
                           key={`garment-${index}`}
-                          ref={(el) => { garmentsRefs.current[index] = el; }}
+                          ref={(el) => {
+                            garmentsRefs.current[index] = el;
+                          }}
                           className="garments opacity-0 text-right w-full text-xl text-white font-thin py-2 leading-4 absolute"
                         >
                           <h1>Garment:</h1>
