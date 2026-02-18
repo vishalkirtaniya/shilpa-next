@@ -140,13 +140,10 @@ export default function WeddingCardPage() {
           {/* Mockup Section */}
           <section className="xl:h-[800px] mx-auto flex justify-center mb-10">
             <div className="relative h-full w-full">
-              <Image
-                className="object-contain"
+              <img
+                className="object-contain w-full"
                 src="/src/project/Wedding card/page 2/mockup 3.png"
                 alt="Wedding card mockup"
-                width={800}
-                height={800}
-                style={{ objectFit: 'contain' }}
               />
             </div>
           </section>
