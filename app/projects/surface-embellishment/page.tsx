@@ -47,13 +47,10 @@ export default function SurfaceEmbellishmentPage() {
           {/* Hero Section */}
           <section className="xxs:h-[500px] sm:h-[700px] lg:h-[800px] xl:h-screen w-full relative overflow-hidden pt-[50px]">
             <div className="absolute inset-0">
-              <Image
-                className="object-contain xxs:left-52 xxs:scale-[290%] sm:scale-[200%] lg:scale-[170%] 2xl:scale-[170%] xl:left-40 2xl:left-[350px] left-0 bottom-0"
+              <img
+                className="absolute xxs:left-52 xxs:scale-[290%] sm:scale-[200%] lg:scale-[170%] 2xl:scale-[170%] xl:left-40 2xl:left-[350px] left-0 bottom-0 bg-contain"
                 src="/src/project/surface work/hero page/20221120_155919.jpg"
                 alt="Surface work hero image"
-                fill
-                style={{ objectFit: 'contain', objectPosition: 'left bottom' }}
-                priority
               />
             </div>
             <div className="absolute grid place-content-end xxs:p-5 lg:p-16 h-full w-full">
@@ -61,7 +58,7 @@ export default function SurfaceEmbellishmentPage() {
                 <h1 className="xxs:text-md sm:text-lg lg:text-xl mb-2 font-[500]">
                   Surface Work
                 </h1>
-                <p className="xxs:text-xs sm:text-sm md:text-md leading-4 lg:text-lg">
+                <p className="xxs:text-xs sm:text-sm md:text-md leading-6 lg:text-lg">
                   I remember my <b><i>Thamma</i></b> (grandmother) making
                   <b><i>Katha</i></b> from old cotton sarees of her. She would
                   spend days stitching all the pieces of cloth together with her
@@ -71,7 +68,7 @@ export default function SurfaceEmbellishmentPage() {
                   Katha, this is my love for you). And that&apos;s how i got introduced
                   to Running stitches.
                 </p>
-                <p className="xxs:text-xs sm:text-sm md:text-lg leading-4 lg:text-xl mt-2">
+                <p className="xxs:text-xs sm:text-sm md:text-lg leading-6 lg:text-xl mt-2">
                   Incorporating the same affection and patience, I made this piece
                   combined with <b><i>block print</i></b>, hope you like it!!!
                 </p>
